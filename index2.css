@@ -1,0 +1,878 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    
+    color: #fff;
+
+    
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 1rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+   a {
+    color: #fff; /* اللون الأساسي للروابط */
+    text-decoration: none;
+    transition: color 0.3s ease; /* انتقال سلس لتأثير hover */
+  }
+  
+  a:hover {
+    color: #000; /* لون أسود عند التمرير */
+  }
+  
+  .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+  }
+  
+
+/* kkkkk */
+  .header-description {
+    text-align: center;
+    margin: 20px;
+}
+
+#description {
+    font-size: 16px;
+    color: #333;
+}
+
+#read-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#read-more-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+  /* Header Section */
+  .header-content {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 70px; /* to avoid navbar overlap */
+  }
+  
+  .overlay {
+    position: absolute;
+    z-index: 2;
+    padding: 0 1rem;
+  }
+  
+  .overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .overlay p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    background-color: #f8f9fa;
+  }
+  
+  .about-image {
+    width: 40%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  /* Animation for Image Movement */
+@keyframes float {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    25% {
+      transform: translate(10px, -10px);
+    }
+    50% {
+      transform: translate(0px, -15px);
+    }
+    75% {
+      transform: translate(-10px, 10px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+  
+  .about-image {
+    width: 40%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 5s ease-in-out infinite; /* Added animation */
+  }
+  
+  .about-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    background: orangered/* Add gradient background */
+   /* Change text color for better contrast */
+  }
+  
+  .about-image {
+    width: 40%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 5s ease-in-out infinite; /* Animation for movement */
+  }
+  
+  .about-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-text {
+    width: 50%;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff; /* Change header color for better visibility */
+  }
+  
+  .about-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-text {
+    width: 50%;
+    margin-left: 2rem;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+  }
+  
+  /* Floating Action Buttons */
+  .floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+  }
+  
+  .fab {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #25D366;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .fab img {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  
+  .fab.phone {
+    background-color: #34b7f1;
+  }
+  
+  .fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 60px;
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      margin: 1rem 0;
+    }
+  
+    .burger {
+      display: flex;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image {
+      width: 80%;
+      height: 250px;
+      margin-bottom: 1.5rem;
+    }
+  
+    .about-text {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .overlay h1 {
+      font-size: 2.5rem;
+    }
+  
+    .overlay p {
+      font-size: 1rem;
+    }
+  }
+  /* Services Section */
+.services-section {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background-color: #f8f9fa; /* Light background color */
+  }
+  
+  .services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color:black;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    width: 30%; /* Adjust based on design */
+    margin: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 40px;
+  }
+  
+  .service-card img {
+    width: 60px; /* Adjust icon size */
+    height: 60px; /* Adjust icon size */
+    margin-bottom: 1rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    color: black;
+  }
+  
+  /* Hover effect */
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .service-card {
+      width: 80%; /* Stack services on smaller screens */
+    }
+  }
+  /* Logo Section */
+/* Navbar Section */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333; /* Background color for the navbar */
+    padding: 1rem 2rem;
+    position: relative;
+  }
+  
+  .navbar-logo {
+    position: relative; /* To position the logo animation */
+  }
+  
+  .logo {
+    width: 80px; /* Adjust logo size */
+    height: auto;
+    animation: float 5s ease-in-out infinite; /* Add animation for movement */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Box shadow for the logo */
+    border-radius: 10px;
+  }
+  
+  /* Animation for Logo Movement */
+  @keyframes float {
+    0% {
+      transform: translateX(0); /* Start position */
+    }
+    25% {
+      transform: translateX(10px); /* Move to the right */
+    }
+    50% {
+      transform: translateX(0); /* Back to center */
+    }
+    75% {
+      transform: translateX(-10px); /* Move to the left */
+    }
+    100% {
+      transform: translateX(0); /* Back to center */
+    }
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar-menu li {
+    margin: 0 1rem;
+  }
+  
+  .navbar-menu a {
+    color: #fff; /* White color for links */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .navbar-menu a:hover {
+    color: #ff7e5f; /* Change color on hover */
+  }
+  
+  /* Projects Section */
+.projects-section {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background-color: #f0f0f0; /* خلفية فاتحة */
+  }
+  
+  .projects-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .projects-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .project-item {
+    width: 300px; /* Adjust the width for each project item */
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Smooth zoom effect */
+  }
+  
+  /* Hover effect for project items */
+  .project-item:hover {
+    transform: translateY(-5px); /* Lift the item slightly */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-item:hover img {
+    transform: scale(1.1); /* Zoom in on hover */
+  }
+  
+  /* Animation for gallery images */
+  .project-item {
+    animation: fadeIn 2s ease-in-out both;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-item {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+  
+  /* Testimonials Section */
+.testimonials-section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background-color: #fafafa; /* خلفية فاتحة للقسم */
+    border-radius: 20px;
+  }
+  
+  .testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    
+  }
+  
+  .testimonial-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-item:hover {
+    transform: translateY(-10px); /* يتحرك لأعلى عند التحويم */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .testimonial-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .testimonial-author {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    color: red;
+    font-size: 2.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ff7e5f; /* لون مميز عند التحويم */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial-item {
+      width: 100%; /* Full width on smaller screens */
+    }
+    .testimonial-item {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 50%; /* يجعل الشكل دائري */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 250px; /* عرض الشهادة */
+        height: 250px; /* ارتفاع الشهادة لتشكيل دائرة */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+        text-align: center;
+      }
+      
+      .testimonial-text {
+        font-size: 16px;
+        color: #555;
+        margin: 0.5rem 0;
+        font-style: italic;
+      }
+      
+      .testimonial-author {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+      .testimonial-item {
+        background: linear-gradient(135deg, #3b4c79, #0f2c56); /* اللون الداكن *//* تدرج من الوردي الفاتح للبرتقالي */
+  padding: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+/* تنسيق القسم */
+.location-section {
+    background-color: #f5f5f5; /* خلفية فاتحة وجميلة */
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* ظل خفيف حول القسم */
+  }
+  
+  .location-info h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .location-info p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* تنسيق الخريطة */
+  .location-map .map-image {
+    width: 100%; /* تأكد من أن الصورة تأخذ العرض الكامل */
+    max-width: 800px; /* حد أقصى للعرض */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* إضافة شادو للصورة */
+    transition: transform 0.3s ease-in-out; /* حركة تكبير عند التحويم */
+    
+  }
+  
+  .location-map .map-image:hover {
+    transform: scale(1.05); /* تكبير الصورة عند التحويم */
+  }
+  
+  /* تنسيق الزر */
+  .location-button-container {
+    margin-top: 2rem;
+  }
+  
+  .location-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #3498db; /* لون جذاب (أزرق) */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .location-button:hover {
+    background-color: #2980b9; /* تغيير اللون عند التحويم */
+    transform: translateY(-5px); /* حركة رفع الزر عند التحويم */
+  }
+  
+  .location-button:active {
+    transform: translateY(0); /* حركة التفاعل عند الضغط */
+  }
+  /* تنسيق قسم الكلمات المفتاحية */
+.keywords-section {
+    background-color: #f5f5f5; /* خلفية فاتحة للقسم */
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* إضافة شادو خفيف */
+  }
+  
+  .keywords-info h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .keywords-info p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .keywords-list h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .keywords-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .keywords-list li {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: #e2e2e2;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .keywords-list li:hover {
+    background-color: #3498db; /* تغيير الخلفية عند التمرير */
+    color: #fff; /* تغيير اللون إلى الأبيض */
+  }
+  /* تنسيق الفوتر */
+.footer {
+    background-color: #333; /* خلفية داكنة للفوتر */
+    color: #fff;
+    padding: 2rem 1rem; /* إضافة حواف من الأعلى والأسفل */
+    font-family: 'Arial', sans-serif;
+    width: 100%; /* تأكيد أن الفوتر سيغطي عرض الصفحة بالكامل */
+    position: relative;
+    box-sizing: border-box; /* ضمان أن التنسيق لا يتجاوز حدود الفوتر */
+  }
+  
+  .footer-container {
+    display: inline;
+    justify-content: space-between; /* توزيع الأقسام بشكل أفقي عبر العرض */
+    gap: 2rem; /* المسافة بين الأقسام */
+    flex-wrap: wrap; /* السماح بتوزيع المحتوى بشكل جيد في الشاشات الصغيرة */
+    box-sizing: border-box;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px; /* تحديد الحد الأدنى للعرض */
+    margin: 1rem 0;
+    text-align: left;
+    box-sizing: border-box;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #3498db;
+  }
+  
+  .social-media ul li a {
+    font-size: 1.2rem;
+  }
+  
+  .footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+  }
+  
+  .footer-bottom p {
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* تصميم متجاوب */
+  @media (max-width: 1024px) {
+    .footer-container {
+      flex-direction: column; /* تغيير التوزيع إلى عمودي على الشاشات الصغيرة */
+      align-items: center;
+    }
+  
+    .footer-section {
+      text-align: center;
+      flex: 1 1 100%; /* عرض كامل لكل قسم في الشاشات الصغيرة */
+      margin-bottom: 1rem;
+    }
+  
+    .footer-bottom p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+    }
+  
+    .footer-section h3 {
+      font-size: 1.3rem;
+    }
+  
+    .footer-bottom p {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-section h3 {
+      font-size: 1.2rem;
+    }
+  
+    .footer-bottom p {
+      font-size: 0.7rem;
+    }
+  }
+  
